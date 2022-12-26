@@ -8,7 +8,6 @@ const App = () => {
   const [currentNumber, setCurrentNumber] = useState("0");
   const [firstNumber, setFirstNumber] = useState("0");
   const [operation, setOperation] = useState("");
-  const [showDecimal, setShowDecimal] = useState(false);
 
   const handleOnClear = () => {
     setCurrentNumber("0");
@@ -89,7 +88,7 @@ const App = () => {
     }
   };
   const handleSetComma = () => {
-    setCurrentNumber((prev) => `${prev}${"."}`);
+    setCurrentNumber((prev: string) => `${prev}${"."}`);
   };
   return (
     <Container>
